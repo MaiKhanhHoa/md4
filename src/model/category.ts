@@ -1,11 +1,13 @@
 import {Schema,model} from 'mongoose'
 
 export interface ICategory {
-    nameCategory:string
+    nameCategory:string,
+    description:string
 }
 
 const categorySchema = new Schema<ICategory>({
-    nameCategory:String
+    nameCategory:String,
+    description:String
 })
 
 const Category = model<ICategory>('category',categorySchema)

@@ -28,7 +28,7 @@ export interface IProduct {
     nameProduct?: string;
     price?: number;
     category?: ICategory;
-    description?: string;
+    quantity?: number;
 }
 declare const Product: import("mongoose").Model<IProduct, {}, {}, {}, any>;
 export { Product };

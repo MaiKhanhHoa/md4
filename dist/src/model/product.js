@@ -9,7 +9,7 @@ const ProductSchema = new mongoose_1.Schema({
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "category"
     },
-    description: String,
+    quantity: Number,
 });
 const Product = (0, mongoose_1.model)('product', ProductSchema);
 exports.Product = Product;

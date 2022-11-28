@@ -3,7 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Category = void 0;
 const mongoose_1 = require("mongoose");
 const categorySchema = new mongoose_1.Schema({
-    nameCategory: String
+    nameCategory: String,
+    description: String
 });
 const Category = (0, mongoose_1.model)('category', categorySchema);
 exports.Category = Category;

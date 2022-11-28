@@ -1,22 +1,22 @@
-import {Schema,model} from 'mongoose'
+import {Schema, model} from 'mongoose'
 import {ICategory} from "./category";
 
 export interface IProduct {
-    nameProduct ?:string,
-    price ?:number,
-    category ?: ICategory,
-    description ?:string
+    nameProduct?: string,
+    price?: number,
+    category?: ICategory,
+    quantity?: number
 }
 
 const ProductSchema = new Schema<IProduct>({
-    nameProduct : String,
-    price : Number,
-    category : {
+    nameProduct: String,
+    price: Number,
+    category: {
         type: Schema.Types.ObjectId,
-        ref:"category"
+        ref: "category"
     },
-    description:String,
+    quantity: Number,
 })
 
-const Product = model<IProduct>('product',ProductSchema)
+const Product = model<IProduct>('product', ProductSchema)
 export {Product}

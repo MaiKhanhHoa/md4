@@ -5,7 +5,6 @@ class CategoryController {
     constructor() {
         this.saveCategory = async (req, res) => {
             let newCategory = req.body;
-            console.log(newCategory);
             await category_1.Category.create(newCategory);
             res.status(201).json({
                 mess: "Create"

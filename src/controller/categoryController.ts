@@ -5,7 +5,6 @@ import {Category} from "../model/category";
 class CategoryController {
     saveCategory = async (req:Request,res:Response)=>{
         let newCategory = req.body
-        console.log(newCategory)
         await Category.create(newCategory)
         res.status(201).json({
             mess:"Create"
